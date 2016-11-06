@@ -1,0 +1,54 @@
+{
+  "name": "nodecg-follower-alert",
+  "version": "0.0.0",
+  "description": "Shows an alert when you get a new follower, integrated with nodecg-beam-service and nodecg-twitch-service",
+  "homepage": "https://gamemak.in",
+  "author": {
+    "name": "Michael Allar",
+    "email": "allar@michaelallar.com",
+    "url": "http://allarsblog.com"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "nodecg",
+    "follower",
+    "alert",
+    "beam",
+    "twitch",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "~0.8.0",
+    "dashboardPanels": [
+      {
+        "name": "follower-alert",
+        "title": "Follower Alert",
+        "width": 2,
+        "file": "follower-alert.html",
+        "headerColor": "#9f9bbd"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 800,
+        "height": 400
+      }
+    ],
+    "soundCues": [
+      {
+        "name": "follow-alert-sound",
+        "defaultFile": "sound/bikehorn.ogg",
+        "defaultVolume": 70,
+        "channels": 1        
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "MIT"
+}
