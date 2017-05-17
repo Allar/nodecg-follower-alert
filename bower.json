@@ -1,0 +1,9 @@
+{
+  "name": "nodecg-follower-alert",
+  "dependencies": {
+    "nodecg-replicant": "NodeCGElements/nodecg-replicant",
+    "paper-styles": "PolymerElements/paper-styles",
+    "paper-item": "PolymerElements/paper-item",
+    "jquery": "~2.2.0"
+  }
+}

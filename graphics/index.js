@@ -3,7 +3,11 @@
 var QueuedFollowers = [];
 var bAlerting = false;
 
+var LastFollowers = nodecg.Replicant('last-followers', {defaultValue: []});
+
 nodecg.listenFor('channel-followed', 'nodecg-beam-service', function(user) {
+    LastFollowers.value.unshift(user.username);
+    LastFollowers.value.length = Math.min(LastFollowers.value.length, 5);
     QueuedFollowers.push({username: user.username, platform: 'beam'});
     if (bAlerting === false) {
         playAlert();
@@ -11,6 +15,8 @@ nodecg.listenFor('channel-followed', 'nodecg-beam-service', function(user) {
 });
 
 nodecg.listenFor('channel-followed', 'nodecg-twitch-service', function(user) {
+    LastFollowers.value.unshift(user.display_name);
+    LastFollowers.value.length = Math.min(LastFollowers.value.length, 5);
     QueuedFollowers.push({username: user.display_name, platform: 'twitch'});
     if (bAlerting === false) {
         playAlert();

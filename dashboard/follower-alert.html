@@ -2,8 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="import" href="components/nodecg-replicant/nodecg-replicant.html">
+    <link rel="import" href="components/paper-styles/paper-styles.html">
+    <script src="components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-
+    Recent Followers:<br/>
+    <div class='followerList' role="listbox">
+    </div>
 </body>
+
+<script>
+    var LastFollowers = nodecg.Replicant('last-followers', {defaultValue: []});
+    LastFollowers.on('change', function(newValue, oldValue) {
+        $('div.followerList').empty();
+        $.each(newValue, function(i) {
+            var paperItem = `<paper-item>${newValue[i]}</paper-item><br/>`;
+            $('div.followerList')[0].innerHTML += paperItem;
+        });
+    });
+</script>
 </html>
