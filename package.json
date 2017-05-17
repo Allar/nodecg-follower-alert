@@ -43,8 +43,10 @@
     "soundCues": [
       {
         "name": "follow-alert-sound",
-        "volume": 70,
-        "file": {"url": "sound/bikehorn.ogg"},
+        "volume": 100,
+        "defaultVolume": 100,
+        "file": {"name": "bikehorn", "url": "sound/bikehorn.ogg", "default": true},
+        "defaultFile": "sound/bikehorn.ogg",
         "assignable": true  
       }
     ]
