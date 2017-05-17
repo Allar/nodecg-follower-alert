@@ -43,9 +43,9 @@
     "soundCues": [
       {
         "name": "follow-alert-sound",
-        "defaultFile": "sound/bikehorn.ogg",
-        "defaultVolume": 70,
-        "channels": 1        
+        "volume": 70,
+        "file": {"url": "sound/bikehorn.ogg"},
+        "assignable": true  
       }
     ]
   },
