@@ -5,5 +5,8 @@
     "paper-styles": "PolymerElements/paper-styles",
     "paper-item": "PolymerElements/paper-item",
     "jquery": "~2.2.0"
+  },
+  "resolutions": {
+    "webcomponentsjs" : "^1.0.0"
   }
 }
